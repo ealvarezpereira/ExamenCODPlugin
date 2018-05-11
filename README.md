@@ -14,3 +14,12 @@ Examen 2 de contornos, proyecto plugin
   -srcdir <direcionjar.> -srcfiles <archivo.jar> 
   -appclass <clase.> 
   -name <nombre.> -title <titulo.>
+  
+  
+5.- Una vez todo escrito hacemos click derecho en el modulo y pulsamos en Install/Reload in developement IDE
+
+6.- Escribimos todos los parametros que te pide y al terminar se queda NetBeans colgado. Si se queda colgado, no pasa nada, es síntoma de que funciona.
+
+7.- Una vez vuelve a la vida comprobamos que ha creado todo
+
+8.- Finalmente hacemos click derecho en el modulo y le damos a create NBM
