@@ -8,7 +8,6 @@ package com.quique.examen;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import javax.swing.JOptionPane;
@@ -62,13 +61,13 @@ public final class ExamenActionListener implements ActionListener {
         
                     String cmd = "javapackager -deploy -native deb "
                     + "-Bcategory="+bcategory 
-                    + "-outdir" +outdir
-                    + "-outfile"+ outfile
-                    + "-srcdir"+srcdir
-                    + "-srcfiles"+srcfiles
-                    + "-appclass"+appclass
-                    + "-name"+nametitle
-                    + "-title"+nametitle;
+                    + " -outdir " +outdir
+                    + " -outfile "+ outfile
+                    + " -srcdir "+srcdir
+                    + " -srcfiles "+srcfiles
+                    + " -appclass "+appclass
+                    + " -name "+nametitle
+                    + " -title "+nametitle;
                     
         try {
             
