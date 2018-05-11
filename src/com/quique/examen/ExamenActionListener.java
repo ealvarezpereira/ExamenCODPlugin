@@ -51,6 +51,15 @@ public final class ExamenActionListener implements ActionListener {
         String appclass = JOptionPane.showInputDialog("Clase de la aplicacion (appclass)");
         String nametitle = JOptionPane.showInputDialog("Titulo y nombre de la app");
 
+                    String cmd = "javapackager -deploy -native deb "
+                    + "-Bcategory="+bcategory 
+                    + "-outdir" +outdir
+                    + "-outfile"+ outfile
+                    + "-srcdir"+srcdir
+                    + "-srcfiles"+srcfiles
+                    + "-appclass"+appclass
+                    + "-name"+nametitle
+                    + "-title"+nametitle;
 
     }
 }
