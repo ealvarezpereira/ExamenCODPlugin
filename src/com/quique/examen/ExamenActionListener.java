@@ -39,10 +39,17 @@ public final class ExamenActionListener implements ActionListener {
     @Override
 
     /**
-     *
+     * @param outdir Es la direccion donde guardamos el archivo
+     * @param outfile nombre del archivo que vamos a crear
+     * @param bcategory categoria donde se instalara el archivo en caso de instalarlo
+     * @param srcdir direccion del .jar
+     * @param srcfiles archivo .jar
+     * @param appclass clase de la aplicacion
+     * @param nametitle titulo y nombre del archivo
      */
     public void actionPerformed(ActionEvent e) {
 
+        //Pedimos todas las variables        
         String outdir = JOptionPane.showInputDialog("Direccion de salida (outdir)");
         String outfile = JOptionPane.showInputDialog("Nombre del archivo (outfile)");
         String bcategory = JOptionPane.showInputDialog("Categoria (category)");
@@ -51,6 +58,8 @@ public final class ExamenActionListener implements ActionListener {
         String appclass = JOptionPane.showInputDialog("Clase de la aplicacion (appclass)");
         String nametitle = JOptionPane.showInputDialog("Titulo y nombre de la app");
 
+        //Añadimos todo el comando a un String
+        
                     String cmd = "javapackager -deploy -native deb "
                     + "-Bcategory="+bcategory 
                     + "-outdir" +outdir
@@ -62,9 +71,14 @@ public final class ExamenActionListener implements ActionListener {
                     + "-title"+nametitle;
                     
         try {
+            
+            //Creamos un objeto de tipo runtime
+            
             Runtime rt = Runtime.getRuntime();
-            //Process pr = rt.exec("cmd /c dir");
+            //Le pasamos el comando que tiene que ejecutar
             Process pr = rt.exec(cmd);
+            
+            //Esto estaba en el ejemplo, si esta ahi es porque algo hace. No tengo ni idea.
 
             BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
 
