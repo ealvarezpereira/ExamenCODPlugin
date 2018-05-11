@@ -10,7 +10,7 @@ Examen 2 de contornos, proyecto plugin
 4.- El comando a ejecutar es este: 
 
   javapackager -deploy -native deb 
-  -Bcategory=<categoria> -outdir <direccionguardado> -outfile <nombre> 
-  -srcdir <direcionjar> -srcfiles <archivo.jar> 
-  -appclass <clase> 
-  -name <nombre> -title <titulo>
+  -Bcategory=<categoria.> -outdir <direccionguardado.> -outfile <nombre.> 
+  -srcdir <direcionjar.> -srcfiles <archivo.jar> 
+  -appclass <clase.> 
+  -name <nombre.> -title <titulo.>
