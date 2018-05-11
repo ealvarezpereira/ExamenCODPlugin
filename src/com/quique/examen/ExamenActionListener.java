@@ -60,6 +60,26 @@ public final class ExamenActionListener implements ActionListener {
                     + "-appclass"+appclass
                     + "-name"+nametitle
                     + "-title"+nametitle;
+                    
+        try {
+            Runtime rt = Runtime.getRuntime();
+            //Process pr = rt.exec("cmd /c dir");
+            Process pr = rt.exec(cmd);
 
+            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+
+            String line = null;
+
+            while ((line = input.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            int exitVal = pr.waitFor();
+            System.out.println("Exited with error code " + exitVal);
+        } catch (IOException ex) {
+            Exceptions.printStackTrace(ex);
+        } catch (InterruptedException ex) {
+            Exceptions.printStackTrace(ex);
+        }
     }
 }
