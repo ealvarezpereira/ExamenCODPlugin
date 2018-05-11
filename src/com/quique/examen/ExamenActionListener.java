@@ -7,10 +7,16 @@ package com.quique.examen;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionReferences;
 import org.openide.awt.ActionRegistration;
+import org.openide.util.Exceptions;
 import org.openide.util.NbBundle.Messages;
 
 @ActionID(
@@ -27,14 +33,24 @@ import org.openide.util.NbBundle.Messages;
   @ActionReference(path = "Toolbars/File", position = 0)
 })
 @Messages("CTL_ExamenActionListener=Examen")
+
 public final class ExamenActionListener implements ActionListener {
 
     @Override
+
+    /**
+     *
+     */
     public void actionPerformed(ActionEvent e) {
-        
-        
-        
-        
-        
+
+        String outdir = JOptionPane.showInputDialog("Direccion de salida (outdir)");
+        String outfile = JOptionPane.showInputDialog("Nombre del archivo (outfile)");
+        String bcategory = JOptionPane.showInputDialog("Categoria (category)");
+        String srcdir = JOptionPane.showInputDialog("Direccion del src (srcdir)");
+        String srcfiles = JOptionPane.showInputDialog("Archivo .jar (srcfiles)");
+        String appclass = JOptionPane.showInputDialog("Clase de la aplicacion (appclass)");
+        String nametitle = JOptionPane.showInputDialog("Titulo y nombre de la app");
+
+
     }
 }
